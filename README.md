@@ -41,7 +41,7 @@ and  browse to the app at [http://localhost:3000/](http://localhost:3000/)
 
 Simple access the demo page
 
-[https://https://rominamoya.github.io/listing/](https://rominamoya.github.io/listProducts/)
+[https://https://rominamoya.github.io/listing/](https://rominamoya.github.io/products-list//)
 
 ### Run the Tests
 

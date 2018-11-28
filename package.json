@@ -1,7 +1,7 @@
 {
   "name": "listProducts",
   "version": "0.1.0",
-  "homepage": "https://rominamoya.github.io/listProducts",
+  "homepage": "https://rominamoya.github.io/products-list/",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
