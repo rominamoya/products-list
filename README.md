@@ -35,7 +35,7 @@ A server Task have been preconfigured, so just run
 ```
 $ npm run start
 ```
-and  browse to the app at `http://localhost:3000/`.
+and  browse to the app at [http://localhost:3000/](http://localhost:3000/)
 
 ### OR
 
