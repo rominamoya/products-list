@@ -1,14 +1,10 @@
-import {
-  fetchProducts,
-  sortFetchedProductstBy,
-  filterBrand
-} from "./actions/productsAction";
-import { getVisibleProducts } from './selectors';
+import { fetchProducts } from "./actions/productsAction";
+import { getVisibleProducts } from "./selectors";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { Grid } from "semantic-ui-react";
+import { Grid, Container } from "semantic-ui-react";
 import ListComponent from "./List/ListComponent";
-import Filters from "./Filters"
+import Filters from "./Filters";
 import React, { Component } from "react";
 
 class App extends Component {
@@ -22,36 +18,31 @@ class App extends Component {
 
   render() {
     return (
-        <Grid celled="internally">
-          <Grid.Row>
-            <Grid.Column width={13}>
-            <Filters />
-              <ListComponent
-                productList={this.props.productList}
-              />
-            </Grid.Column>
-          </Grid.Row>
+      <Container>
+        <Grid textAlign="center" stackable padded columns={4}>
+          <Filters />
+          <ListComponent productList={this.props.productList} />
         </Grid>
+      </Container>
     );
   }
 }
 
-const  mapStateToProps = state => {
-
+const mapStateToProps = state => {
   return {
-    productList: getVisibleProducts(state),
+    productList: getVisibleProducts(state)
   };
-}
+};
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
-      fetchProducts: fetchProducts,
-      sortFetchedProductstBy: sortFetchedProductstBy,
-      filterBrand: filterBrand
+      fetchProducts: fetchProducts
     },
     dispatch
   );
 
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);

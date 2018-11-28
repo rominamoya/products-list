@@ -3,7 +3,8 @@ import {
   FETCH_PRODUCTS_SUCCESS,
   FETCH_PRODUCTS_ERROR,
   SORT_FETCHED_PRODUCTS_BY,
-  FILTER_BRAND
+  FILTER_BRAND,
+  FILTER_TYPE
 } from "../constants";
 
 export const fetchProducts = () => ({
@@ -27,5 +28,10 @@ export const sortFetchedProductstBy = (evt, data) => ({
 
 export const filterBrand = (evt, data) => ({
     type: FILTER_BRAND,
+    payload: data.value
+});
+
+export const filterType = (evt, data) => ({
+    type: FILTER_TYPE,
     payload: data.value
 });

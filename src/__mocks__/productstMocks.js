@@ -78,7 +78,7 @@ const mockProducts = [
      "image": "https://cdn.flaconi.de/media/catalog/215x/g/i/giorgio-armani-si-eau-de-parfum-50ml_7.jpg",
      "price": 4395,
      "size": "30ML",
-     "rating": 99
+     "rating": 88
  },
 ]
 

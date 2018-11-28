@@ -1,8 +1,12 @@
 export const getVisibleProducts = (state) => {
-  const { filters, sorting, productList } = state.products;
+  const { brands, types, sorting, productList } = state.products;
+
   return productList
     .filter(product => {
-      return !filters.length ? true : filters.includes(product.brand)
+      return !brands.length ? true : brands.includes(product.brand)
+    })
+    .filter(product => {
+      return !types.length ? true : types.includes(product.type)
     })
     .sort((a, b) => {
       let sorted ;

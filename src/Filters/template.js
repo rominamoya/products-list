@@ -1,27 +1,38 @@
-import React from 'react';
-import { Dropdown } from "semantic-ui-react";
-import {brands, sortingCriteria } from './constants'
+import React from "react";
+import { Dropdown, Grid } from "semantic-ui-react";
+import  sortingCriteria from "./constants";
 
-const  Filters = ({
-  filterBrand,
-  sortFetchedProductstBy,
-})  => {
+const Filters = ({ brands, types, filterBrand, filterType,sortFetchedProductstBy }) => {
   return (
-    <div>
-      <div>
-        Filters:
-        <div>
-          Brand:
-           <Dropdown placeholder='Select' multiple selection options={brands} onChange={filterBrand} />
-        </div>
-
-      </div>
-      <div>
-        Select sorting:
-        <Dropdown placeholder='Select' selection options={sortingCriteria} onChange={sortFetchedProductstBy} />
-      </div>
-    </div>
+    <Grid.Row>
+      <Grid.Column mobile={16} tablet={8} computer={4}>
+        <Dropdown
+          placeholder="Select"
+          multiple
+          selection
+          options={brands}
+          onChange={filterBrand}
+        />
+      </Grid.Column>
+      <Grid.Column mobile={16} tablet={8} computer={4}>
+        <Dropdown
+          placeholder="Select"
+          multiple
+          selection
+          options={types}
+          onChange={filterType}
+        />
+      </Grid.Column>
+      <Grid.Column mobile={16} tablet={8} computer={4}>
+        <Dropdown
+          text="Sort By"
+          inline
+          options={sortingCriteria}
+          onChange={sortFetchedProductstBy}
+        />
+      </Grid.Column>
+    </Grid.Row>
   );
-}
+};
 
 export default Filters;

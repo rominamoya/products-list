@@ -45,7 +45,7 @@ Simple access the demo page
 
 ### Run the Tests
 
-A server Task have been preconfigured, so just run
+Just run
 
 ```
 $ npm run test
